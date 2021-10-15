@@ -96,7 +96,7 @@ const Container = styled.nav`
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  z-index: 2;
+  z-index: 15;
   background-color: transparent;
   position: ${(props) => (props.soft ? "absolute" : "relative")};
   top: 0;

@@ -85,7 +85,7 @@ const Search = (props) => {
   const useQuery = new URLSearchParams(props.location.search);
   const searchQuery = useQuery.get("search");
   const [query, setQuery] = useState(searchQuery || "");
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState(null);
   const [page, setPage] = useState(1);
 
   const pusher = useCallback(

@@ -83,7 +83,7 @@ const Container = styled.div`
 `;
 const MovieList = (props) => {
   const { setPage, movies, maxPage, page } = props;
-  const renderMovies = movies.map((movie) => {
+  const renderMovies = movies?.map((movie) => {
     if (!movie.poster_path) {
       return null;
     }
@@ -98,6 +98,13 @@ const MovieList = (props) => {
       </MovieItem>
     );
   });
+  if (movies?.length === 0) {
+    return (
+      <h4 style={{ fontSize: "3rem", color: "red", textAlign: "center" }}>
+        Nothing matched your search term
+      </h4>
+    );
+  }
   return (
     <Container>
       <MoviesContainer>{renderMovies}</MoviesContainer>
