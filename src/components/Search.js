@@ -130,7 +130,6 @@ const Search = (props) => {
       clearTimeout(timeOut);
     };
   }, [query, pusher]);
-  console.log(props);
   return (
     <>
       <Container>

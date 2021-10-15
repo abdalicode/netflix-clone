@@ -342,7 +342,6 @@ const MoviePreview = ({ movie, closer, single }) => {
   if (!movie) {
     return "";
   }
-  console.log(movie);
   return (
     <>
       <Container
